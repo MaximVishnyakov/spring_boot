@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit user</title>
+</head>
+<body>
+<form th:method="POST"  th:action="@{/{id}(id=${user.getId()})}">
+
+    <input type="text" th:value="${user.getName()}" name="name" placeholder="Enter name" class="form-control"><br>
+    <input type="text" th:value="${user.getSurname()}" name="surname" placeholder="Enter Surname" class="form-control"><br>
+    <button type="submit"   class="btn btn-success">Edit</button>
+
+</form>
+</body>
+</html>
